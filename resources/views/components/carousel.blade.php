@@ -6,22 +6,22 @@
             <li data-target="#homeCarousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img class="img-fluid w-50" src="{{ asset('images/argo.png') }}" alt="Second slide">
+            <div class="carousel-item px-5 active">
+                <img class="img-fluid w-50" src="..." alt="Second slide">
                 <div class="carousel-caption d-block">
                     <h5>...</h5>
                     <p>...</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="img-fluid w-50" src="{{ asset('images/creta.png') }}" alt="Second slide">
+            <div class="carousel-item px-5">
+                <img class="img-fluid w-50" src="..." alt="Second slide">
                 <div class="carousel-caption d-block">
                     <h5>...</h5>
                     <p>...</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="img-fluid w-50" src="{{ asset('images/onix.png') }}" alt="Third slide">
+            <div class="carousel-item px-5">
+                <img class="img-fluid w-50" src="..." alt="Third slide">
                 <div class="carousel-caption d-block">
                     <h5>...</h5>
                     <p>...</p>

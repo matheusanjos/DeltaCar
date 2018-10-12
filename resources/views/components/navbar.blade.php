@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-gradient-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-gradient-dark px-5">
     <div class="container">
         <a href="{{ asset('/') }}" class="navbar-brand">{{ config('app.name') }}</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#itemsCollapse">
@@ -11,7 +11,7 @@
                 <li class="nav-item"><a href="#" class="nav-link active">Carros</a></li>
                 <li class="nav-item"><a href="#" class="nav-link active">Tarifas</a></li>
                 @guest
-                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link active">Login</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active" data-toggle="modal" data-target="#modalLogin">Login</a></li>
                 @else
                     <li class="nav-item dropdown">
                         <a href="#" id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -34,3 +34,6 @@
         </div>
     </div>
 </nav>
+
+@component('components.modal-login')
+@endcomponent

@@ -21,6 +21,56 @@ body { background: #eee; }
 .navbar-toggler { border: none; }
 .navbar-toggler:focus { outline: none; }
 
+/* Modal */
+.modal-content {
+    background-color: #3a3a3a;
+    border: none;
+}
+
+.modal-header {
+    padding: 25px 25px 15px 25px;
+    background-color: #333;
+    border: none;
+    color: #888;
+}
+
+.modal-header .close {
+    font-weight: bold;
+    color: #eee;
+}
+
+.modal-title {
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #eee;
+}
+
+.modal-body {
+    background-color: #3a3a3a;
+}
+
+.modal-footer {
+    background-color: #333;
+    border: none;
+    line-height: 30px;
+    color: #eee;
+}
+
+.modal-label { color: #eee }
+
+.form-group > .form-control {
+    background: #333;
+    border: 1px solid #333;
+    color: #eee
+}
+
+.form-group > .form-control:focus {
+    background: #444;
+    border: 3px solid #555;
+    box-shadow: none;
+    color: #eee;
+}
+
 /* Carousel */
 #carouselContainer {
     background: url(../images/carousel-bg.jpg) no-repeat center top fixed;
