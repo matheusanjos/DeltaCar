@@ -1,12 +1,18 @@
-@extends('layouts.index')
-
-@section('pageTitle', '| Home')
+@extends('layouts.header')
 
 @section('content')
-    @component('components.carousel')
-    @endcomponent
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
 
-    <div class="container">
-        <h1 class="text-center text-dark">Bem-Vindo</h1>
+                <div class="card-body">
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 @endsection

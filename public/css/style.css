@@ -4,22 +4,34 @@
     box-sizing: border-box;
 }
 
-body, html, .main { width: 100%; height: 100%; }
+body, html { width: 100%; height: 100%; }
 
-body { background: #eee; }
-
-.main { padding-top: 60px; }
+body { background: #eee; padding-top: 76px; }
 
 /* Navbar */
-.navbar { min-height: 60px; }
+.navbar {
+    background-color: #292929;
+    min-height: 60px;
+    font-size: 14pt;
+}
 
 .navbar-brand {
-    padding: 0;
-    line-height: 44px;
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
 }
 
 .navbar-toggler { border: none; }
 .navbar-toggler:focus { outline: none; }
+
+.nav-item::after{
+    content:'';
+    display:block;
+    border-bottom: solid 3px #eee;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.nav-item:hover::after{ transform: scaleX(1) }
 
 /* Modal */
 .modal-content {
@@ -35,7 +47,6 @@ body { background: #eee; }
 }
 
 .modal-header .close {
-    font-weight: bold;
     color: #eee;
 }
 
@@ -54,6 +65,9 @@ body { background: #eee; }
     border: none;
     line-height: 30px;
     color: #eee;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+
 }
 
 .modal-label { color: #eee }
@@ -61,26 +75,32 @@ body { background: #eee; }
 .form-group > .form-control {
     background: #333;
     border: 1px solid #333;
-    color: #eee
+    color: #888
 }
 
 .form-group > .form-control:focus {
     background: #444;
     border: 3px solid #555;
     box-shadow: none;
-    color: #eee;
+    color: #888;
 }
+
+input[type="email"]::placeholder, input[type="password"]::placeholder { color: #888; }
 
 /* Carousel */
 #carouselContainer {
     background: url(../images/carousel-bg.jpg) no-repeat center top fixed;
     background-size: cover;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
 }
 
 #homecarousel, .carousel-inner, .carousel-item {
-    height: 90vh;
+    display: flex;
+    height: 85vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 
