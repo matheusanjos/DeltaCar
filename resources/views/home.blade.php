@@ -1,7 +1,13 @@
 @extends('layouts.header')
 
+@section('pageTitle', '| Home')
+
 @section('content')
-<div class="container">
+
+@component('components.carousel')
+@endcomponent
+
+<div class="container p-4" id="x">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,4 +21,6 @@
         </div>
     </div>
 </div>
+
+<script src="{{ asset('js/change.nav-color.js') }}" defer></script>
 @endsection

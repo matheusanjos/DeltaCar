@@ -30,7 +30,7 @@
 
             <div class="modal-footer px-4">
                 <p class="mr-auto mb-0">Não possui cadastro? Registre-se já!</p>
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cadastre-se</button>
+                <button type="button" class="btn btn-outline-light" onclick="window.location='{{ url('/cliente/cadastro') }}'">Cadastre-se</button>
             </div>
 
         </div>

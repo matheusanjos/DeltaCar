@@ -7,8 +7,8 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img class="img-fluid w-25 mx-auto" src="{{ asset('images/creta.png') }}" alt="Second slide">
-                <div class="carousel-caption d-block">
+                <img src="" alt="">
+                <div class="carousel-caption">
                     <h2>Delta Car</h2>
                     <p>...</p>
                 </div>

@@ -21,25 +21,25 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <nav class="navbar fixed-top navbar-expand-lg bg-color">
             <div class="container">
-                <a href="{{ url('/') }}" class="navbar-brand">
-                   <img src="{{ asset('images/delta-car.png') }}" alt="{{ config('app.name') }}" class="w-75">
+                <a href="/home" class="navbar-brand">
+                   <img id="navbar-img" src="{{ asset('images/delta-car.png') }}" alt="{{ config('app.name') }}" width="150">
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#itemsCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="fa fa-bars"></span>
                 </button>
 
                 <div id="itemsCollapse" class="collapse navbar-collapse text-center">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a href="{{ asset('/') }}" class="nav-link active">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link active">Carros</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link active">Tarifas</a></li>
+                        <li class="nav-item border-color"><a href="/home" class="nav-link link-color active">Home</a></li>
+                        <li class="nav-item border-color"><a href="#" class="nav-link link-color active">Carros</a></li>
+                        <li class="nav-item border-color"><a href="#" class="nav-link link-color active">Tarifas</a></li>
                         @guest
-                            <li class="nav-item"><a href="#" class="nav-link active" data-toggle="modal" data-target="#modalLogin">Login</a></li>
+                            <li class="nav-item border-color"><a href="#" class="nav-link link-color active" data-toggle="modal" data-target="#modalLogin">Login</a></li>
                         @else
-                            <li class="nav-item dropdown">
-                                <a href="#" id="navbarDropdown" class="nav-link active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item border-color dropdown">
+                                <a href="#" id="navbarDropdown" class="nav-link link-color active dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                     <span class="caret"></span>
                                 </a>
@@ -63,7 +63,7 @@
         @component('components.modal-login')
         @endcomponent
 
-        <div id="main" class="p-4">
+        <div id="main">
             @yield('content')
         </div>
     </div>
