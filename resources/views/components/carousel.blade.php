@@ -7,26 +7,26 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="" alt="">
+                <img src="{{ asset('images/argo.png') }}" class="img-fluid" width="35%">
                 <div class="carousel-caption">
-                    <h2>Delta Car</h2>
-                    <p>...</p>
+                    <h1>Delta Car</h1>
+                    <p style="font-size: 15pt;">Alugue um carro em qualquer lugar!</p>
                 </div>
             </div>
-            {{-- <div class="carousel-item">
-                <img class="img-fluid w-50" src="..." alt="Second slide">
-                <div class="carousel-caption d-block">
+            <div class="carousel-item">
+                <img src="{{ asset('images/creta.png') }}" class="img-fluid" width="35%">
+                <div class="carousel-caption">
                     <h5>...</h5>
                     <p>...</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="img-fluid w-50" src="..." alt="Third slide">
-                <div class="carousel-caption d-block">
+                <img src="{{ asset('images/onix.png') }}" class="img-fluid" width="35%">
+                <div class="carousel-caption">
                     <h5>...</h5>
                     <p>...</p>
                 </div>
-            </div> --}}
+            </div>
         </div>
         <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

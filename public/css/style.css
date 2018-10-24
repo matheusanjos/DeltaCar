@@ -112,4 +112,16 @@ input[type="email"]::placeholder, input[type="password"]::placeholder { color: #
     height: 100%;
 }
 
+.img-fluid {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 #x { height: 1500px; }
+
+/* Content */
+#content { padding-top: 76px; }
