@@ -8,23 +8,23 @@
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
                 <img src="{{ asset('images/argo.png') }}" class="img-fluid d-none d-sm-block">
-                <div class="carousel-caption d-block">
+                <div class="carousel-caption d-block px-2">
                     <h1>Delta Car</h1>
-                    <p style="font-size: 15pt;">Alugue um carro em qualquer lugar!</p>
+                    <p>Alugue um carro em qualquer lugar!</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('images/creta.png') }}" class="img-fluid d-none d-sm-block">
-                <div class="carousel-caption d-block">
+                <div class="carousel-caption d-block px-2">
                     <h1>Ofertas Imperdíveis!</h1>
-                    <p style="font-size: 15pt;">Temos preços especiais para você cliente fiel.</p>
+                    <p>Temos os melhores preços para você cliente fiel.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('images/mustang.png') }}" class="img-fluid d-none d-sm-block">
-                <div class="carousel-caption d-block">
+                <div class="carousel-caption d-block px-2">
                     <h1>Novos grupos de carros</h1>
-                    <p style="font-size: 15pt;">Grupos especiais de carros esportivos e de colecionador.</p>
+                    <p>Grupos especiais de carros esportivos e de colecionador.</p>
                 </div>
             </div>
         </div>
