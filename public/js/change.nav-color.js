@@ -3,7 +3,7 @@ $(window).scroll(function(){
 });
 
 $(window).scroll(function(){
-    $('#navbar-img').toggleClass('scrolled', $(this).scrollTop() > 60);
+    $('#navbar-logo').toggleClass('scrolled', $(this).scrollTop() > 60);
 });
 
 $(window).scroll(function(){
