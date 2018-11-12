@@ -6,12 +6,12 @@
 
 body, html { width: 100%; height: 100%; }
 
-body { background: #eee; }
+body { background-color: #eee; }
 
 /* Navbar */
+
 .navbar {
     min-height: 60px;
-    background-color: transparent;
     font-size: 13pt; /* ptnuncamais */
     transition: 500ms ease;
 }
@@ -24,7 +24,7 @@ body { background: #eee; }
     line-height: 60px;
 }
 
-#navbar-logo.scrolled {
+.navbar-brand img.scrolled {
     -webkit-filter: invert(40%) grayscale(100%) brightness(70%) contrast(4);
     filter: invert(40%) grayscale(100%) brightness(70%) contrast(4);
 }
@@ -32,8 +32,8 @@ body { background: #eee; }
 .navbar-toggler { border: none; }
 .navbar-toggler:focus { outline: none; }
 
-.fa-bars { color: #eee; }
-.fa-bars.scrolled { color: #292929; }
+.navbar-toggler span, .nav-link, .nav-link:hover { color: #eee; }
+.navbar-toggler span.scrolled, .nav-link.scrolled { color: #292929; }
 
 .nav-item::after{
     content:'';
@@ -45,66 +45,102 @@ body { background: #eee; }
 .nav-item:hover::after{ transform: scaleX(1) }
 .nav-item.scrolled::after { border-color: #292929; }
 
-.nav-link { color: #eee; }
-.nav-link:hover { color: #eee; }
-.nav-link.scrolled { color: #292929; }
+@media (max-width: 991px)
+{
+    .navbar {
+        background-color: #eee !important;
+    }
 
-/* Modal */
-.modal-content {
+    .navbar-brand img {
+        -webkit-filter: invert(40%) grayscale(100%) brightness(70%) contrast(4);
+        filter: invert(40%) grayscale(100%) brightness(70%) contrast(4);
+    }
+
+    .navbar-toggler span, .nav-link, .nav-link:hover { color: #292929; }
+
+    .nav-item::after { border-color: #292929; }
+}
+
+/* Modal Login */
+
+#modalLogin .modal-content {
     background-color: #3a3a3a;
-    border: none;
-}
-
-.modal-header {
-    padding: 25px 25px 15px 25px;
-    background-color: #333;
-    border: none;
-    color: #888;
-}
-.modal-header .close { color: #eee; }
-
-.modal-title {
-    margin-bottom: 10px;
-    line-height: 30px;
     color: #eee;
 }
 
-.modal-body { background-color: #3a3a3a; }
-
-.modal-footer {
+#modalLogin .modal-header, #modalLogin .modal-footer {
     background-color: #333;
     border: none;
-    line-height: 30px;
-    color: #eee;
+}
+
+#modalLogin .modal-footer {
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
 }
 
-.modal-label { color: #eee }
-
-.form-group > .form-control {
-    background: #333;
-    border: 1px solid #333;
-    color: #888
+#modalLogin .modal-title, #modalLogin .close {
+    color: #eee;
+    line-height: 30px;
 }
-.form-group > .form-control:focus {
-    background: #444;
-    border: 3px solid #555;
+
+#modalLogin .close:focus { outline: none; }
+
+#modalLogin .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#modalLogin .form-group input {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #eee;
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
     box-shadow: none;
-    color: #888;
 }
 
+#modalLogin .form-group input[name="loginPassword"] {
+    margin-bottom: 1.5px;
+}
 
-/* Carousel */
-.carousel-inner {
+#modalLogin .form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+#modalLogin .form-group input:focus ~ label,
+#modalLogin .form-group input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+}
+
+#modalLogin a {
+    color: #eee;
+    text-decoration-line: underline;
+    margin-top: 3px;
+}
+
+/* Main Carousel */
+
+#mainCarousel .carousel-inner {
     background: url(../images/carousel-bg.jpg) no-repeat center center scroll;
     background-size: cover;
     height: 100vh;
     min-height: 300px;
 }
 
-.carousel-item { height: 100%; }
-.carousel-item > img {
+#mainCarousel .carousel-item { height: 100%;
+    padding-top: 76px;
+    padding-bottom: 76px; }
+
+#mainCarousel .carousel-item > img {
     width: 35%;
     position: absolute;
     margin: auto;
@@ -114,32 +150,90 @@ body { background: #eee; }
     bottom: 0;
 }
 
-.carousel-caption > p { font-size: 15pt; }
+#mainCarousel .carousel-caption > p { font-size: 15pt; }
 
-/* Content */
-/* #grupoCar {
-} */
-
-/* Media Queries */
 @media (max-width: 875px)
 {
-    .carousel-item > img {
+    #mainCarousel .carousel-item > img {
         width: 300px;
     }
 }
 
-@media (max-width: 575px)
-{
-    .carousel-caption {
-        position: absolute;
-        width: 300px;
-        z-index: 15;
-        top: 58%;
-        left: 50%;
-        margin: -100px 0 0 -150px;
-    }
-    .carousel-caption > h1 { font-size: 18pt; }
-    .carousel-caption > p { font-size: 10pt; }
+/* Home */
 
-    .hidden-xs { display: none!important; }
+section#aluguel {
+    background: #292929;
+    color: #eee;
+    padding: 12px 36px;
+}
+
+section#aluguel input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    -webkit-rtl-ordering: logical;
+    outline: 0;
+    cursor: text;
+    text-rendering: auto;
+    display: inline-block;
+    overflow: visible;
+    background-color: #fff;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-align: left;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    width: 100%;
+    height: auto;
+    min-height: 46px;
+    margin: 0;
+    padding: 10px 35px 10px 15px;
+    border-radius: 3px;
+    box-shadow: none;
+    background-size: 20px;
+    background-position: calc(100% - 7px) 50%;
+    background-repeat: no-repeat;
+}
+
+section#aluguel button {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 11px 15px;
+    margin-top: 29px;
+    min-width: 172px;
+}
+
+section#carros div.col-py {
+    padding: 8rem 0;
+}
+
+hr.dark {
+    border-color: #333;
+}
+
+section#carros img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+@media (max-width: 991px)
+{
+    section#carros img {
+        width: 40%;
+        min-width: 300px;
+        top: 15%;
+    }
+
+    section#carros div.col-lg-3 {
+        padding: 6rem 0 !important;
+    }
 }

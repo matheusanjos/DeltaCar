@@ -3,7 +3,7 @@ $(window).scroll(function(){
 });
 
 $(window).scroll(function(){
-    $('#navbar-logo').toggleClass('scrolled', $(this).scrollTop() > 60);
+    $('.navbar-brand img').toggleClass('scrolled', $(this).scrollTop() > 60);
 });
 
 $(window).scroll(function(){
@@ -15,5 +15,5 @@ $(window).scroll(function(){
 });
 
 $(window).scroll(function(){
-    $('.fa-bars').toggleClass('scrolled', $(this).scrollTop() > 60);
+    $('.navbar-toggler span').toggleClass('scrolled', $(this).scrollTop() > 60);
 });

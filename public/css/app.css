@@ -523,6 +523,8 @@ mark,
   background-color: #f8fafc;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   max-width: 100%;
   height: auto;
 }
@@ -557,12 +559,16 @@ kbd {
   color: #fff;
   background-color: #212529;
   border-radius: 0.2rem;
+  -webkit-box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
 }
 
 kbd kbd {
   padding: 0;
   font-size: 100%;
   font-weight: 700;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 pre {
@@ -2229,6 +2235,8 @@ pre code {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2252,8 +2260,8 @@ pre code {
   background-color: #fff;
   border-color: #a1cbef;
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2509,7 +2517,8 @@ textarea.form-control {
 
 .was-validated .custom-control-input:valid:checked ~ .custom-control-label::before,
 .custom-control-input.is-valid:checked ~ .custom-control-label::before {
-  background-color: #5cd08d;
+  background: #5cd08d -webkit-gradient(linear, left top, left bottom, from(#74d69e), to(#5cd08d)) repeat-x;
+  background: #5cd08d linear-gradient(180deg, #74d69e, #5cd08d) repeat-x;
 }
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before,
@@ -2633,7 +2642,8 @@ textarea.form-control {
 
 .was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before,
 .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
-  background-color: #e9605c;
+  background: #e9605c -webkit-gradient(linear, left top, left bottom, from(#eb7774), to(#e9605c)) repeat-x;
+  background: #e9605c linear-gradient(180deg, #eb7774, #e9605c) repeat-x;
 }
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before,
@@ -2806,10 +2816,24 @@ textarea.form-control {
 .btn.disabled,
 .btn:disabled {
   opacity: 0.65;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
+}
+
+.btn:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled).active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn:not(:disabled):not(.disabled):active:focus,
+.btn:not(:disabled):not(.disabled).active:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 a.btn.disabled,
@@ -2819,20 +2843,24 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
   border-color: #3490dc;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #227dc7;
+  background: #227dc7 -webkit-gradient(linear, left top, left bottom, from(#4290cf), to(#227dc7)) repeat-x;
+  background: #227dc7 linear-gradient(180deg, #4290cf, #227dc7) repeat-x;
   border-color: #2176bd;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
 }
 
 .btn-primary.disabled,
@@ -2847,32 +2875,37 @@ fieldset:disabled a.btn {
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #2176bd;
+  background-image: none;
   border-color: #1f6fb2;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
 }
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
+  background: #6c757d -webkit-gradient(linear, left top, left bottom, from(#818990), to(#6c757d)) repeat-x;
+  background: #6c757d linear-gradient(180deg, #818990, #6c757d) repeat-x;
   border-color: #6c757d;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5a6268;
+  background: #5a6268 -webkit-gradient(linear, left top, left bottom, from(#72797f), to(#5a6268)) repeat-x;
+  background: #5a6268 linear-gradient(180deg, #72797f, #5a6268) repeat-x;
   border-color: #545b62;
 }
 
 .btn-secondary:focus,
 .btn-secondary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
 }
 
 .btn-secondary.disabled,
@@ -2887,32 +2920,37 @@ fieldset:disabled a.btn {
 .show > .btn-secondary.dropdown-toggle {
   color: #fff;
   background-color: #545b62;
+  background-image: none;
   border-color: #4e555b;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus,
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-secondary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
 }
 
 .btn-success {
   color: #fff;
-  background-color: #38c172;
+  background: #38c172 -webkit-gradient(linear, left top, left bottom, from(#55ca87), to(#38c172)) repeat-x;
+  background: #38c172 linear-gradient(180deg, #55ca87, #38c172) repeat-x;
   border-color: #38c172;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #2fa360;
+  background: #2fa360 -webkit-gradient(linear, left top, left bottom, from(#4db078), to(#2fa360)) repeat-x;
+  background: #2fa360 linear-gradient(180deg, #4db078, #2fa360) repeat-x;
   border-color: #2d995b;
 }
 
 .btn-success:focus,
 .btn-success.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
 }
 
 .btn-success.disabled,
@@ -2927,32 +2965,37 @@ fieldset:disabled a.btn {
 .show > .btn-success.dropdown-toggle {
   color: #fff;
   background-color: #2d995b;
+  background-image: none;
   border-color: #2a9055;
 }
 
 .btn-success:not(:disabled):not(.disabled):active:focus,
 .btn-success:not(:disabled):not(.disabled).active:focus,
 .show > .btn-success.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
 }
 
 .btn-info {
   color: #212529;
-  background-color: #6cb2eb;
+  background: #6cb2eb -webkit-gradient(linear, left top, left bottom, from(#81bdee), to(#6cb2eb)) repeat-x;
+  background: #6cb2eb linear-gradient(180deg, #81bdee, #6cb2eb) repeat-x;
   border-color: #6cb2eb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-info:hover {
   color: #fff;
-  background-color: #4aa0e6;
+  background: #4aa0e6 -webkit-gradient(linear, left top, left bottom, from(#64aeea), to(#4aa0e6)) repeat-x;
+  background: #4aa0e6 linear-gradient(180deg, #64aeea, #4aa0e6) repeat-x;
   border-color: #3f9ae5;
 }
 
 .btn-info:focus,
 .btn-info.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
 }
 
 .btn-info.disabled,
@@ -2967,32 +3010,37 @@ fieldset:disabled a.btn {
 .show > .btn-info.dropdown-toggle {
   color: #fff;
   background-color: #3f9ae5;
+  background-image: none;
   border-color: #3495e3;
 }
 
 .btn-info:not(:disabled):not(.disabled):active:focus,
 .btn-info:not(:disabled):not(.disabled).active:focus,
 .show > .btn-info.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
 }
 
 .btn-warning {
   color: #212529;
-  background-color: #ffed4a;
+  background: #ffed4a -webkit-gradient(linear, left top, left bottom, from(#feef65), to(#ffed4a)) repeat-x;
+  background: #ffed4a linear-gradient(180deg, #feef65, #ffed4a) repeat-x;
   border-color: #ffed4a;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-warning:hover {
   color: #212529;
-  background-color: #ffe924;
+  background: #ffe924 -webkit-gradient(linear, left top, left bottom, from(#feec44), to(#ffe924)) repeat-x;
+  background: #ffe924 linear-gradient(180deg, #feec44, #ffe924) repeat-x;
   border-color: #ffe817;
 }
 
 .btn-warning:focus,
 .btn-warning.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
 }
 
 .btn-warning.disabled,
@@ -3007,32 +3055,37 @@ fieldset:disabled a.btn {
 .show > .btn-warning.dropdown-toggle {
   color: #212529;
   background-color: #ffe817;
+  background-image: none;
   border-color: #ffe70a;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active:focus,
 .btn-warning:not(:disabled):not(.disabled).active:focus,
 .show > .btn-warning.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
 }
 
 .btn-danger {
   color: #fff;
-  background-color: #e3342f;
+  background: #e3342f -webkit-gradient(linear, left top, left bottom, from(#e6524e), to(#e3342f)) repeat-x;
+  background: #e3342f linear-gradient(180deg, #e6524e, #e3342f) repeat-x;
   border-color: #e3342f;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-danger:hover {
   color: #fff;
-  background-color: #d0211c;
+  background: #d0211c -webkit-gradient(linear, left top, left bottom, from(#d6423e), to(#d0211c)) repeat-x;
+  background: #d0211c linear-gradient(180deg, #d6423e, #d0211c) repeat-x;
   border-color: #c51f1a;
 }
 
 .btn-danger:focus,
 .btn-danger.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
 }
 
 .btn-danger.disabled,
@@ -3047,32 +3100,37 @@ fieldset:disabled a.btn {
 .show > .btn-danger.dropdown-toggle {
   color: #fff;
   background-color: #c51f1a;
+  background-image: none;
   border-color: #b91d19;
 }
 
 .btn-danger:not(:disabled):not(.disabled):active:focus,
 .btn-danger:not(:disabled):not(.disabled).active:focus,
 .show > .btn-danger.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
 }
 
 .btn-light {
   color: #212529;
-  background-color: #f8f9fa;
+  background: #f8f9fa -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), to(#f8f9fa)) repeat-x;
+  background: #f8f9fa linear-gradient(180deg, #f8f9fa, #f8f9fa) repeat-x;
   border-color: #f8f9fa;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-light:hover {
   color: #212529;
-  background-color: #e2e6ea;
+  background: #e2e6ea -webkit-gradient(linear, left top, left bottom, from(#e5e9ed), to(#e2e6ea)) repeat-x;
+  background: #e2e6ea linear-gradient(180deg, #e5e9ed, #e2e6ea) repeat-x;
   border-color: #dae0e5;
 }
 
 .btn-light:focus,
 .btn-light.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
 
 .btn-light.disabled,
@@ -3087,32 +3145,37 @@ fieldset:disabled a.btn {
 .show > .btn-light.dropdown-toggle {
   color: #212529;
   background-color: #dae0e5;
+  background-image: none;
   border-color: #d3d9df;
 }
 
 .btn-light:not(:disabled):not(.disabled):active:focus,
 .btn-light:not(:disabled):not(.disabled).active:focus,
 .show > .btn-light.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
+  background: #343a40 -webkit-gradient(linear, left top, left bottom, from(#51575c), to(#343a40)) repeat-x;
+  background: #343a40 linear-gradient(180deg, #51575c, #343a40) repeat-x;
   border-color: #343a40;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .btn-dark:hover {
   color: #fff;
-  background-color: #23272b;
+  background: #23272b -webkit-gradient(linear, left top, left bottom, from(#43474a), to(#23272b)) repeat-x;
+  background: #23272b linear-gradient(180deg, #43474a, #23272b) repeat-x;
   border-color: #1d2124;
 }
 
 .btn-dark:focus,
 .btn-dark.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
 .btn-dark.disabled,
@@ -3127,14 +3190,15 @@ fieldset:disabled a.btn {
 .show > .btn-dark.dropdown-toggle {
   color: #fff;
   background-color: #1d2124;
+  background-image: none;
   border-color: #171a1d;
 }
 
 .btn-dark:not(:disabled):not(.disabled):active:focus,
 .btn-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-dark.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
 .btn-outline-primary {
@@ -3173,8 +3237,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
 }
 
 .btn-outline-secondary {
@@ -3213,8 +3277,8 @@ fieldset:disabled a.btn {
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-secondary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
 }
 
 .btn-outline-success {
@@ -3253,8 +3317,8 @@ fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled):active:focus,
 .btn-outline-success:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-success.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(56, 193, 114, 0.5);
 }
 
 .btn-outline-info {
@@ -3293,8 +3357,8 @@ fieldset:disabled a.btn {
 .btn-outline-info:not(:disabled):not(.disabled):active:focus,
 .btn-outline-info:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-info.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(108, 178, 235, 0.5);
 }
 
 .btn-outline-warning {
@@ -3333,8 +3397,8 @@ fieldset:disabled a.btn {
 .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
 .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-warning.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 237, 74, 0.5);
 }
 
 .btn-outline-danger {
@@ -3373,8 +3437,8 @@ fieldset:disabled a.btn {
 .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
 .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-danger.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(227, 52, 47, 0.5);
 }
 
 .btn-outline-light {
@@ -3413,8 +3477,8 @@ fieldset:disabled a.btn {
 .btn-outline-light:not(:disabled):not(.disabled):active:focus,
 .btn-outline-light:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-light.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
 
 .btn-outline-dark {
@@ -3453,8 +3517,8 @@ fieldset:disabled a.btn {
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
 .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-dark.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
 .btn-link {
@@ -3592,6 +3656,8 @@ input[type="button"].btn-block {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
 
 .dropdown-menu-right {
@@ -3725,20 +3791,23 @@ input[type="button"].btn-block {
 .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background: #f8f9fa -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), to(#f8f9fa)) repeat-x;
+  background: #f8f9fa linear-gradient(180deg, #f8f9fa, #f8f9fa) repeat-x;
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
 }
 
 .dropdown-item.disabled,
 .dropdown-item:disabled {
   color: #6c757d;
   background-color: transparent;
+  background-image: none;
 }
 
 .dropdown-menu.show {
@@ -3858,6 +3927,16 @@ input[type="button"].btn-block {
 .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
+}
+
+.btn-group.show .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-group.show .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .btn-group-vertical {
@@ -4113,7 +4192,10 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
@@ -4124,6 +4206,8 @@ input[type="button"].btn-block {
 .custom-control-input:active ~ .custom-control-label::before {
   color: #fff;
   background-color: #cce3f6;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .custom-control-input:disabled ~ .custom-control-label {
@@ -4153,6 +4237,8 @@ input[type="button"].btn-block {
       -ms-user-select: none;
           user-select: none;
   background-color: #dee2e6;
+  -webkit-box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .custom-control-label::after {
@@ -4173,7 +4259,8 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
@@ -4181,7 +4268,10 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
@@ -4201,7 +4291,8 @@ input[type="button"].btn-block {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
@@ -4224,6 +4315,8 @@ input[type="button"].btn-block {
   background-size: 8px 10px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -4232,8 +4325,8 @@ input[type="button"].btn-block {
 .custom-select:focus {
   border-color: #a1cbef;
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(161, 203, 239, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(161, 203, 239, 0.5);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(161, 203, 239, 0.5);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(161, 203, 239, 0.5);
 }
 
 .custom-select:focus::-ms-value {
@@ -4319,6 +4412,8 @@ input[type="button"].btn-block {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .custom-file-label::after {
@@ -4333,7 +4428,8 @@ input[type="button"].btn-block {
   line-height: 1.6;
   color: #495057;
   content: "Browse";
-  background-color: #e9ecef;
+  background: #e9ecef -webkit-gradient(linear, left top, left bottom, from(#ebeef1), to(#e9ecef)) repeat-x;
+  background: #e9ecef linear-gradient(180deg, #ebeef1, #e9ecef) repeat-x;
   border-left: 1px solid #ced4da;
   border-radius: 0 0.25rem 0.25rem 0;
 }
@@ -4372,9 +4468,12 @@ input[type="button"].btn-block {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #3490dc;
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
   border: 0;
   border-radius: 1rem;
+  -webkit-box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -4391,7 +4490,8 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-webkit-slider-thumb:active {
-  background-color: #cce3f6;
+  background: #cce3f6 -webkit-gradient(linear, left top, left bottom, from(#d3e7f7), to(#cce3f6)) repeat-x;
+  background: #cce3f6 linear-gradient(180deg, #d3e7f7, #cce3f6) repeat-x;
 }
 
 .custom-range::-webkit-slider-runnable-track {
@@ -4402,14 +4502,17 @@ input[type="button"].btn-block {
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
+  -webkit-box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #3490dc;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
   border: 0;
   border-radius: 1rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -4426,7 +4529,7 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-moz-range-thumb:active {
-  background-color: #cce3f6;
+  background: #cce3f6 linear-gradient(180deg, #d3e7f7, #cce3f6) repeat-x;
 }
 
 .custom-range::-moz-range-track {
@@ -4437,6 +4540,7 @@ input[type="button"].btn-block {
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
+  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .custom-range::-ms-thumb {
@@ -4445,9 +4549,10 @@ input[type="button"].btn-block {
   margin-top: 0;
   margin-right: 0.2rem;
   margin-left: 0.2rem;
-  background-color: #3490dc;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x;
   border: 0;
   border-radius: 1rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -4463,7 +4568,7 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-ms-thumb:active {
-  background-color: #cce3f6;
+  background: #cce3f6 linear-gradient(180deg, #d3e7f7, #cce3f6) repeat-x;
 }
 
 .custom-range::-ms-track {
@@ -4474,6 +4579,7 @@ input[type="button"].btn-block {
   background-color: transparent;
   border-color: transparent;
   border-width: 0.5rem;
+  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .custom-range::-ms-fill-lower {
@@ -5685,7 +5791,8 @@ input[type="button"].btn-block {
 
 .alert-primary {
   color: #1b4b72;
-  background-color: #d6e9f8;
+  background: #d6e9f8 -webkit-gradient(linear, left top, left bottom, from(#dbecf9), to(#d6e9f8)) repeat-x;
+  background: #d6e9f8 linear-gradient(180deg, #dbecf9, #d6e9f8) repeat-x;
   border-color: #c6e0f5;
 }
 
@@ -5699,7 +5806,8 @@ input[type="button"].btn-block {
 
 .alert-secondary {
   color: #383d41;
-  background-color: #e2e3e5;
+  background: #e2e3e5 -webkit-gradient(linear, left top, left bottom, from(#e5e6e8), to(#e2e3e5)) repeat-x;
+  background: #e2e3e5 linear-gradient(180deg, #e5e6e8, #e2e3e5) repeat-x;
   border-color: #d6d8db;
 }
 
@@ -5713,7 +5821,8 @@ input[type="button"].btn-block {
 
 .alert-success {
   color: #1d643b;
-  background-color: #d7f3e3;
+  background: #d7f3e3 -webkit-gradient(linear, left top, left bottom, from(#dcf4e7), to(#d7f3e3)) repeat-x;
+  background: #d7f3e3 linear-gradient(180deg, #dcf4e7, #d7f3e3) repeat-x;
   border-color: #c7eed8;
 }
 
@@ -5727,7 +5836,8 @@ input[type="button"].btn-block {
 
 .alert-info {
   color: #385d7a;
-  background-color: #e2f0fb;
+  background: #e2f0fb -webkit-gradient(linear, left top, left bottom, from(#e5f2fb), to(#e2f0fb)) repeat-x;
+  background: #e2f0fb linear-gradient(180deg, #e5f2fb, #e2f0fb) repeat-x;
   border-color: #d6e9f9;
 }
 
@@ -5741,7 +5851,8 @@ input[type="button"].btn-block {
 
 .alert-warning {
   color: #857b26;
-  background-color: #fffbdb;
+  background: #fffbdb -webkit-gradient(linear, left top, left bottom, from(#fefbe0), to(#fffbdb)) repeat-x;
+  background: #fffbdb linear-gradient(180deg, #fefbe0, #fffbdb) repeat-x;
   border-color: #fffacc;
 }
 
@@ -5755,7 +5866,8 @@ input[type="button"].btn-block {
 
 .alert-danger {
   color: #761b18;
-  background-color: #f9d6d5;
+  background: #f9d6d5 -webkit-gradient(linear, left top, left bottom, from(#f9dbdb), to(#f9d6d5)) repeat-x;
+  background: #f9d6d5 linear-gradient(180deg, #f9dbdb, #f9d6d5) repeat-x;
   border-color: #f7c6c5;
 }
 
@@ -5769,7 +5881,8 @@ input[type="button"].btn-block {
 
 .alert-light {
   color: #818182;
-  background-color: #fefefe;
+  background: #fefefe -webkit-gradient(linear, left top, left bottom, from(#fdfdfe), to(#fefefe)) repeat-x;
+  background: #fefefe linear-gradient(180deg, #fdfdfe, #fefefe) repeat-x;
   border-color: #fdfdfe;
 }
 
@@ -5783,7 +5896,8 @@ input[type="button"].btn-block {
 
 .alert-dark {
   color: #1b1e21;
-  background-color: #d6d8d9;
+  background: #d6d8d9 -webkit-gradient(linear, left top, left bottom, from(#dbddde), to(#d6d8d9)) repeat-x;
+  background: #d6d8d9 linear-gradient(180deg, #dbddde, #d6d8d9) repeat-x;
   border-color: #c6c8ca;
 }
 
@@ -5824,6 +5938,8 @@ input[type="button"].btn-block {
   font-size: 0.675rem;
   background-color: #e9ecef;
   border-radius: 0.25rem;
+  -webkit-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
 .progress-bar {
@@ -6204,6 +6320,8 @@ button.close {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
   outline: 0;
 }
 
@@ -6301,6 +6419,11 @@ button.close {
 
   .modal-dialog-centered::before {
     height: calc(100vh - (1.75rem * 2));
+  }
+
+  .modal-content {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   }
 
   .modal-sm {
@@ -6464,6 +6587,8 @@ button.close {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .popover .arrow {
@@ -6798,10 +6923,14 @@ button.close {
 
 .carousel-control-prev {
   left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.001)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001));
 }
 
 .carousel-control-next {
   right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0.001)));
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001));
 }
 
 .carousel-control-prev-icon,
@@ -6999,6 +7128,46 @@ a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important;
+}
+
+.bg-gradient-primary {
+  background: #3490dc -webkit-gradient(linear, left top, left bottom, from(#51a0e1), to(#3490dc)) repeat-x !important;
+  background: #3490dc linear-gradient(180deg, #51a0e1, #3490dc) repeat-x !important;
+}
+
+.bg-gradient-secondary {
+  background: #6c757d -webkit-gradient(linear, left top, left bottom, from(#818990), to(#6c757d)) repeat-x !important;
+  background: #6c757d linear-gradient(180deg, #818990, #6c757d) repeat-x !important;
+}
+
+.bg-gradient-success {
+  background: #38c172 -webkit-gradient(linear, left top, left bottom, from(#55ca87), to(#38c172)) repeat-x !important;
+  background: #38c172 linear-gradient(180deg, #55ca87, #38c172) repeat-x !important;
+}
+
+.bg-gradient-info {
+  background: #6cb2eb -webkit-gradient(linear, left top, left bottom, from(#81bdee), to(#6cb2eb)) repeat-x !important;
+  background: #6cb2eb linear-gradient(180deg, #81bdee, #6cb2eb) repeat-x !important;
+}
+
+.bg-gradient-warning {
+  background: #ffed4a -webkit-gradient(linear, left top, left bottom, from(#feef65), to(#ffed4a)) repeat-x !important;
+  background: #ffed4a linear-gradient(180deg, #feef65, #ffed4a) repeat-x !important;
+}
+
+.bg-gradient-danger {
+  background: #e3342f -webkit-gradient(linear, left top, left bottom, from(#e6524e), to(#e3342f)) repeat-x !important;
+  background: #e3342f linear-gradient(180deg, #e6524e, #e3342f) repeat-x !important;
+}
+
+.bg-gradient-light {
+  background: #f8f9fa -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), to(#f8f9fa)) repeat-x !important;
+  background: #f8f9fa linear-gradient(180deg, #f8f9fa, #f8f9fa) repeat-x !important;
+}
+
+.bg-gradient-dark {
+  background: #343a40 -webkit-gradient(linear, left top, left bottom, from(#51575c), to(#343a40)) repeat-x !important;
+  background: #343a40 linear-gradient(180deg, #51575c, #343a40) repeat-x !important;
 }
 
 .bg-white {
@@ -10467,7 +10636,7 @@ a.text-dark:focus {
 }
 
 /*!
- * Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.5.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -10677,7 +10846,7 @@ a.text-dark:focus {
   line-height: 2em;
   position: relative;
   vertical-align: middle;
-  width: 2em;
+  width: 2.5em;
 }
 
 .fa-stack-1x,
@@ -11619,12 +11788,32 @@ readers do not read off random characters that represent icons */
   content: "\F381";
 }
 
+.fa-cloud-meatball:before {
+  content: "\F73B";
+}
+
 .fa-cloud-moon:before {
   content: "\F6C3";
 }
 
+.fa-cloud-moon-rain:before {
+  content: "\F73C";
+}
+
+.fa-cloud-rain:before {
+  content: "\F73D";
+}
+
+.fa-cloud-showers-heavy:before {
+  content: "\F740";
+}
+
 .fa-cloud-sun:before {
   content: "\F6C4";
+}
+
+.fa-cloud-sun-rain:before {
+  content: "\F743";
 }
 
 .fa-cloud-upload-alt:before {
@@ -11875,6 +12064,10 @@ readers do not read off random characters that represent icons */
   content: "\F38D";
 }
 
+.fa-d-and-d-beyond:before {
+  content: "\F6CA";
+}
+
 .fa-dashcube:before {
   content: "\F210";
 }
@@ -11889,6 +12082,10 @@ readers do not read off random characters that represent icons */
 
 .fa-delicious:before {
   content: "\F1A5";
+}
+
+.fa-democrat:before {
+  content: "\F747";
 }
 
 .fa-deploydog:before {
@@ -12433,6 +12630,10 @@ readers do not read off random characters that represent icons */
 
 .fa-flag-checkered:before {
   content: "\F11E";
+}
+
+.fa-flag-usa:before {
+  content: "\F74D";
 }
 
 .fa-flask:before {
@@ -13559,6 +13760,10 @@ readers do not read off random characters that represent icons */
   content: "\F223";
 }
 
+.fa-meteor:before {
+  content: "\F753";
+}
+
 .fa-microchip:before {
   content: "\F2DB";
 }
@@ -13927,6 +14132,10 @@ readers do not read off random characters that represent icons */
   content: "\F3DA";
 }
 
+.fa-person-booth:before {
+  content: "\F756";
+}
+
 .fa-phabricator:before {
   content: "\F3DB";
 }
@@ -14055,6 +14264,10 @@ readers do not read off random characters that represent icons */
   content: "\F2FE";
 }
 
+.fa-poo-storm:before {
+  content: "\F75A";
+}
+
 .fa-poop:before {
   content: "\F619";
 }
@@ -14163,6 +14376,10 @@ readers do not read off random characters that represent icons */
   content: "\F4F7";
 }
 
+.fa-rainbow:before {
+  content: "\F75B";
+}
+
 .fa-random:before {
   content: "\F074";
 }
@@ -14173,6 +14390,10 @@ readers do not read off random characters that represent icons */
 
 .fa-react:before {
   content: "\F41B";
+}
+
+.fa-reacteurope:before {
+  content: "\F75D";
 }
 
 .fa-readme:before {
@@ -14219,10 +14440,6 @@ readers do not read off random characters that represent icons */
   content: "\F25D";
 }
 
-.fa-rendact:before {
-  content: "\F3E4";
-}
-
 .fa-renren:before {
   content: "\F18B";
 }
@@ -14237,6 +14454,10 @@ readers do not read off random characters that represent icons */
 
 .fa-replyd:before {
   content: "\F3E6";
+}
+
+.fa-republican:before {
+  content: "\F75E";
 }
 
 .fa-researchgate:before {
@@ -14561,6 +14782,10 @@ readers do not read off random characters that represent icons */
 
 .fa-smile-wink:before {
   content: "\F4DA";
+}
+
+.fa-smog:before {
+  content: "\F75F";
 }
 
 .fa-smoking:before {
@@ -14943,6 +15168,14 @@ readers do not read off random characters that represent icons */
   content: "\F3FE";
 }
 
+.fa-temperature-high:before {
+  content: "\F769";
+}
+
+.fa-temperature-low:before {
+  content: "\F76B";
+}
+
 .fa-tencent-weibo:before {
   content: "\F1D5";
 }
@@ -15009,6 +15242,10 @@ readers do not read off random characters that represent icons */
 
 .fa-thermometer-three-quarters:before {
   content: "\F2C8";
+}
+
+.fa-think-peaks:before {
+  content: "\F731";
 }
 
 .fa-thumbs-down:before {
@@ -15459,6 +15696,14 @@ readers do not read off random characters that represent icons */
   content: "\F028";
 }
 
+.fa-vote-yea:before {
+  content: "\F772";
+}
+
+.fa-vr-cardboard:before {
+  content: "\F729";
+}
+
 .fa-vuejs:before {
   content: "\F41F";
 }
@@ -15473,6 +15718,10 @@ readers do not read off random characters that represent icons */
 
 .fa-warehouse:before {
   content: "\F494";
+}
+
+.fa-water:before {
+  content: "\F773";
 }
 
 .fa-weebly:before {
@@ -15591,6 +15840,10 @@ readers do not read off random characters that represent icons */
   content: "\F298";
 }
 
+.fa-wpressr:before {
+  content: "\F3E4";
+}
+
 .fa-wrench:before {
   content: "\F0AD";
 }
@@ -15677,7 +15930,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.5.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -15685,14 +15938,49 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?20b351a6af2d523589fd193785e7d7f0);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?20b351a6af2d523589fd193785e7d7f0) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?1dc5b6dd4bf409a6f919be38603f76a0) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?997f6b1819184c54248de33c81b7bb0c) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?63726a69fa60cb67459140ccaf679f96) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?1d220cf9da36861171fa90d3c164f4d3) format("svg");
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?f29ad0031ad2c1c14b771ce504e2bfa7);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?f29ad0031ad2c1c14b771ce504e2bfa7) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?fb493903265cad425ccdf8e04fc2de61) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?bcb927a742a8370b76642fd1a9a749c0) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?48f54f63d7711d0912a9a10205538fc4) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?4478b4d7022cad174e4c04246fe622ef) format("svg");
 }
 
 .fa,
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
+}
+
+/*!
+ * Font Awesome Free 5.5.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?6493321d567eb0f22bd5112fbcf044a8);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?6493321d567eb0f22bd5112fbcf044a8) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?bdadb6ce95c5a2e7b673940721450d3c) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?0b5e3a5451fc62d9023ccafc85bc89db) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?b48c48ea8457846a5695b139c377d3d1) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?0c41971339b9fc5b1cefb0abad1e2e69) format("svg");
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.5.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?ec0716ae8aa1ba781a1a6bcbce833f6c);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?ec0716ae8aa1ba781a1a6bcbce833f6c) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?659c4d58b00226541ef95c3a76e169c5) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?8b7a9afd7b95f62e6ee8a72930bfb9ed) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?b69de69a4ff8ca0abe96ec0b0c180c5b) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?42f9fd6acee87559ac0d6a33488db65e) format("svg");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
 }
 
 .navbar-laravel {

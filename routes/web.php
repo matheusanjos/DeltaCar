@@ -11,18 +11,12 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', 'HomeController@index');
+
+Route::get('/home', function () {
+    return view('home');
+});
 
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/home', function() {
-    return view('home');
-});
-
-Route::get('/cliente/cadastro', function() {
-    return view('cadastrar-cliente');
-});

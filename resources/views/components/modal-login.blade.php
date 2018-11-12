@@ -1,38 +1,36 @@
-<div id="modalLogin" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div id="modalLogin" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-
-            <div class="modal-header px-4">
-                <h4 id="loginLabel" class="modal-title">Login</h4>
+            <div class="modal-header px-4 pb-4">
+                <h4 class="modal-title">Login</h4>
                 <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times</span>
-                    <span class="sr-only">Close</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
             <div class="modal-body p-4">
-
-                <form role="form" action="" method="post" class="login-form">
+                <form action="" method="post">
                     @csrf
                     <div class="form-group">
-                        <label class="modal-label" for="form-email">Digite seu e-mail</label>
-                        <input type="email" name="form-email" placeholder="Email..." class="form-control">
+                        <input type="email" name="loginEmail" class="form-control" required>
+                        <label for="loginEmail">E-mail</label>
                     </div>
 
                     <div class="form-group">
-                        <label class="modal-label" for="form-password">Digite sua senha</label>
-                        <input type="password" name="form-password" placeholder="Senha..." class="form-control">
+                        <input type="password" name="loginPassword" class="form-control" required>
+                        <label for="loginPassword">Senha</label>
+                        <a href="">Esqueceu a senha?</a>
                     </div>
-                    <button type="button" class="btn btn-outline-light mt-2" data-dismiss="modal">Entrar</button>
-                </form>
 
+                    <div class="mt-2 mb-2">
+                        <button class="btn btn-outline-light btn-block">Entrar</button>
+                    </div>
+                </form>
             </div>
 
             <div class="modal-footer px-4">
-                <p class="mr-auto mb-0">Não possui cadastro? Registre-se já!</p>
-                <button type="button" class="btn btn-outline-light" onclick="window.location='{{ url('/cliente/cadastro') }}'">Cadastre-se</button>
+                <p class="mb-0">Não possui cadastro? <a href="">Cadastre-se</a></p>
             </div>
-
         </div>
     </div>
 </div>
