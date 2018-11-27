@@ -16,7 +16,7 @@
             <img src="{{ asset('images/creta.png') }}" alt="{{ config('app.name') }}" class="img-fluid d-none d-sm-block">
             <div class="carousel-caption d-block px-2">
                 <h1>Ofertas Imperdíveis!</h1>
-                <p>Temos os melhores preços para você</p>
+                <p>Temos os melhores preços para você.</p>
             </div>
         </div>
         <div class="carousel-item">

@@ -4,35 +4,42 @@
 
 @section('content')
     <section id="aluguel">
-        <div class="container-fluid py-5">
 
-            <h1>Alugue um carro</h1>
-
-            <form action="" method="post">
+        <div class="block-content">
+            <div class="container-fluid my-5">
                 <div class="row">
-                    <div class="col-lg-10 col-sm-12">
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-12">
-                                <label for="">Local de retirada</label>
-                                <input type="text" name="local" class="form-control" placeholder="Informe o local">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
+                        <h1>Alugue um carro</h1>
+                    </div>
+
+                    <div class="col-lg-10 col-sm-12 mt-3">
+                        <div class="form-row">
+                            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <label for="razao_social">Razão Social</label>
+                                <input placeholder="Razão Social" type="text" class="form-control" name="razao_social">
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                                <label for="">Data/Hora de retirada</label>
-                                <input type="text" name="data" class="form-control">
+
+                            <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <label for="cnpj">CNPJ</label>
+                                <input placeholder="CNPJ" type="text" class="form-control" name="cnpj">
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                                <label for="">Data/Hora de devolução</label>
-                                <input type="text" name="hora" class="form-control">
+
+                            <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <label for="cnpj">CNPJ</label>
+                                <input placeholder="CNPJ" type="text" class="form-control" name="cnpj">
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-sm-12">
-                        <button title="Alugue um carro" type="submit" class="btn btn-outline-light">Alugar</button>
+                    <div class="col-lg-2">
+                        <button type="submit" class="btn btn-outline-light">Alugar</button>
                     </div>
+
                 </div>
-            </form>
+            </div>
         </div>
+
     </section>
 
     <section id="carros">
