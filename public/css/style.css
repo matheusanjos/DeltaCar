@@ -8,14 +8,10 @@ body, html { width: 100%; height: 100%; }
 
 body { background-color: #eee; }
 
-div.block-content {
-    margin: 0 36px;
-}
+div.block-content { margin: 0 36px; }
 
 @media (max-width: 992px){
-    div.block-content {
-        margin: 0 20px;
-    }
+    div.block-content { margin: 0 20px; }
 }
 
 /* Navbar */
@@ -25,7 +21,10 @@ div.block-content {
     font-size: 13pt; /* ptnuncamais */
     transition: 500ms ease;
 }
-.navbar.scrolled { background: #eee !important; }
+.navbar.scrolled {
+    background: #eee !important;
+    border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+}
 
 .navbar-brand {
     padding: 0 15px;
@@ -34,7 +33,7 @@ div.block-content {
     line-height: 60px;
 }
 
-.navbar-brand img.scrolled {
+.navbar.scrolled img {
     -webkit-filter: invert(40%) grayscale(100%) brightness(70%) contrast(4);
     filter: invert(40%) grayscale(100%) brightness(70%) contrast(4);
 }
@@ -43,7 +42,7 @@ div.block-content {
 .navbar-toggler:focus { outline: none; }
 
 .navbar-toggler span, .nav-link, .nav-link:hover { color: #eee; }
-.navbar-toggler span.scrolled, .nav-link.scrolled { color: #292929; }
+.navbar.scrolled span, .navbar.scrolled .nav-link { color: #292929; }
 
 .nav-item::after{
     content:'';
@@ -53,7 +52,7 @@ div.block-content {
     transition: transform 0.3s ease-in-out;
 }
 .nav-item:hover::after{ transform: scaleX(1) }
-.nav-item.scrolled::after { border-color: #292929; }
+.navbar.scrolled .nav-item::after { border-color: #292929; }
 
 @media (max-width: 991px)
 {
@@ -76,6 +75,8 @@ div.block-content {
 #modalLogin .modal-content {
     background-color: #3a3a3a;
     color: #eee;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 #modalLogin .modal-header, #modalLogin .modal-footer {
@@ -134,7 +135,6 @@ div.block-content {
 #modalLogin a {
     color: #eee;
     text-decoration-line: underline;
-    margin-top: 3px;
 }
 
 /* Main Carousel */
@@ -214,8 +214,25 @@ section#aluguel button {
     font-size: 1em;
     text-transform: uppercase;
     padding: 11px 15px;
-    margin-top: 29px;
+    margin-top: 46px;
+    margin-left: -20px;
     min-width: 172px;
+    font-weight: 500;
+}
+
+@media (max-width: 991px)
+{
+    section#aluguel button {
+        margin-left: 0;
+        margin-top: 15px;
+        display: block;
+        width: 100%;
+    }
+}
+
+section#carros {
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 section#carros div.col-py {
@@ -235,8 +252,16 @@ section#carros img {
     transform: translate(-50%, -50%)
 }
 
+section#carros div.dark {
+    background-color: #292929;
+}
+
 @media (max-width: 991px)
 {
+    section#carros {
+        margin: 0;
+    }
+
     section#carros img {
         width: 40%;
         min-width: 300px;
@@ -246,4 +271,20 @@ section#carros img {
     section#carros div.col-lg-3 {
         padding: 6rem 0 !important;
     }
+}
+
+/* Footer */
+
+footer {
+    background-color: #292929;
+}
+
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    color: rgba(255,255,255,.6);
+}
+
+footer.page-footer a {
+    color: #eee;
 }

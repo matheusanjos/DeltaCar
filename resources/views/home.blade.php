@@ -1,4 +1,4 @@
-@extends('layouts.header', ["current"=>"home"])
+@extends('layouts.app', ["current"=>"home"])
 
 @section('pageTitle', '| Home')
 
@@ -15,19 +15,19 @@
 
                     <div class="col-lg-10 col-sm-12 mt-3">
                         <div class="form-row">
-                            <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <label for="razao_social">Razão Social</label>
-                                <input placeholder="Razão Social" type="text" class="form-control" name="razao_social">
+                            <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <label for="local_retirada">Local de Retirada</label>
+                                <input placeholder="Local de Retirada" type="text" class="form-control" name="local_retirada">
                             </div>
 
-                            <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                <label for="cnpj">CNPJ</label>
-                                <input placeholder="CNPJ" type="text" class="form-control" name="cnpj">
+                            <div class="form-group col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                <label for="data_retirada">Data de Retirada</label>
+                                <input placeholder="Data de Retirada" type="text" class="form-control" name="data_retirada">
                             </div>
 
-                            <div class="form-group col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                <label for="cnpj">CNPJ</label>
-                                <input placeholder="CNPJ" type="text" class="form-control" name="cnpj">
+                            <div class="form-group col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                <label for="data_entrega">Data de Entega</label>
+                                <input placeholder="Data de Entega" type="text" class="form-control" name="data_entrega">
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                     <a class="btn btn-outline-dark" href="#">Confira</a>
                 </div>
 
-                <div class="bg-dark col-lg-3 col-py mx-auto text-center text-light">
+                <div class="dark col-lg-3 col-py mx-auto text-center text-light">
                     <img src="{{ asset('images/saveiro.png') }}" alt="{{ config('app.name') }}">
                 </div>
             </div>
