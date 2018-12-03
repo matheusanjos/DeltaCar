@@ -19,11 +19,6 @@
     <div id="app">
         @include('layouts.navbar')
 
-        @if ($current == "home")
-            @component('components.main-carousel')
-            @endcomponent
-        @endif
-
         <div class="content">
             @yield('content')
         </div>

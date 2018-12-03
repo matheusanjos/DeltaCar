@@ -29,7 +29,7 @@
             </div>
 
             <div class="modal-footer px-4">
-                <p class="mb-0">Não possui cadastro? <a href="">Cadastre-se</a></p>
+                <p class="mb-0">Não possui cadastro? <a href="{{ url('/usuario/cadastro') }}">Cadastre-se</a></p>
             </div>
         </div>
     </div>

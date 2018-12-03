@@ -17,6 +17,9 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/usuario/cadastro', 'UserController@create');
+Route::post('/usuario/cadastro', 'UserController@store');
+
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

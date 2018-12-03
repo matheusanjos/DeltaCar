@@ -1,8 +1,11 @@
-@extends('layouts.app', ["current"=>"home"])
+@extends('layouts.app')
 
 @section('pageTitle', '| Home')
 
 @section('content')
+    @component('components.main-carousel')
+    @endcomponent
+
     <section id="aluguel">
 
         <div class="block-content">

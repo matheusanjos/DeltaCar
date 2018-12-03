@@ -12,6 +12,9 @@ div.block-content { margin: 0 36px; }
 
 @media (max-width: 992px){
     div.block-content { margin: 0 20px; }
+    body {
+        padding-top: 76px;
+    }
 }
 
 /* Navbar */
@@ -273,10 +276,19 @@ section#carros div.dark {
     }
 }
 
-/* Footer */
+div#cadastro {
+    margin-top: 76px;
+}
 
-footer {
+div#cadastro .sub-title {
+    font-weight: bold;
+}
+
+/* Breadcrumb, Footer */
+
+footer, nav.breadcrumb ol.breadcrumb {
     background-color: #292929;
+    width: 100%;
 }
 
 footer.page-footer .footer-copyright {
@@ -285,6 +297,6 @@ footer.page-footer .footer-copyright {
     color: rgba(255,255,255,.6);
 }
 
-footer.page-footer a {
+footer.page-footer a, ol.breadcrumb li.breadcrumb-item a {
     color: #eee;
 }
