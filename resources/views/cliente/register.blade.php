@@ -45,12 +45,12 @@
                                 <div class="form-row">
                                     <div class="form-group col-lg-9 col-md-8 col-sm-12 col-xs-12">
                                         <label for="nome_completo">* Nome Completo</label>
-                                        <input placeholder="Nome Completo" type="text" class="form-control" name="nome_completo" >
+                                        <input placeholder="Nome Completo" type="text" class="form-control" name="nome_completo">
                                     </div>
 
                                     <div class="form-group col-lg-3 col-md-4 col-sm-5 col-xs-6">
-                                        <label for="data_nascimento">* Data de Nascimento</label>
-                                        <input placeholder="Data de Nascimento" type="text" class="form-control" name="data_nascimento">
+                                        <label for="dt_nascimento">* Data de Nascimento</label>
+                                        <input placeholder="Data de Nascimento" type="date" class="form-control" name="dt_nascimento">
                                     </div>
                                 </div>
                             </div>
@@ -106,13 +106,13 @@
                             <div class="col-12">
                                 <div class="form-row">
                                     <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                                        <label for="endereco">* Endereço</label>
-                                        <input placeholder="Endereço" type="text" class="form-control" name="endereco">
+                                        <label for="rua">* Rua</label>
+                                        <input placeholder="Rua" type="text" class="form-control" name="rua">
                                     </div>
 
                                     <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                        <label for="num">* Número</label>
-                                        <input placeholder="Número" type="number" class="form-control" name="num">
+                                        <label for="numero">* Número</label>
+                                        <input placeholder="Número" type="number" class="form-control" name="numero">
                                     </div>
                                 </div>
                             </div>

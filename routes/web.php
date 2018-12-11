@@ -17,11 +17,18 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Auth::routes();
+
 Route::get('/admin/login', 'AdminController@showLoginForm');
-Route::get('/admin/index', 'AdminController@index');
+Route::get('/admin/home', 'AdminController@index')->name('admin.home');
 
 Route::get('/admin/carros', 'CarroController@index')->name('carros');
-Route::get('/admin/novo-carro', 'CarroController@createNewCar')->name('novo.carro');
-Route::get('/admin/novo-grupo', 'CarroController@createNewGroup')->name('novo.grupo');
 
-Auth::routes();
+Route::get('/admin/novo-carro', 'CarroController@create')->name('novo.carro');
+Route::post('/admin/home', 'CarroController@store')->name('novo.carro');
+
+Route::get('/admin/novo-grupo', 'GrupoController@create')->name('novo.grupo');
+Route::post('/admin/home', 'GrupoController@store')->name('novo.grupo');
+
+Route::get('/usuario/cadastro', 'ClienteController@create');
+Route::post('/usuario/cadastro', 'ClienteController@store');

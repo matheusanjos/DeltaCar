@@ -3,82 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carro\App;
+use App\Grupo;
 
 class CarroController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('admin.carros');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function createNewCar()
+    public function create()
     {
-        return view('admin.novo-carro');
+        $grupos = Grupo::all();
+        return view('admin.novo-carro', compact('grupos'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        return view('admin.carros');
-    }
+        $produto = new Produto();
+        $produto->modelo = $request->input('modelo');
+        $produto->marca = $request->input('marca');
+        $produto->quantidade = $request->input('quantidade');
+        $produto->grupo_id = $request->input('grupo');
+        $produto->save();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function createNewGroup()
-    {
-        return view('admin.novo-grupo');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return redirect('/admin/home');
     }
 }

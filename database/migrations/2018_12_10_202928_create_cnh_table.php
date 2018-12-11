@@ -14,7 +14,12 @@ class CreateCnhTable extends Migration
     public function up()
     {
         Schema::create('cnh', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('n_cnh');
+            $table->integer('val_cnh');
+            $table->char('cat_cnh');
+            $table->integer('cliente_id')->unsigned();
+            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->primary('cliente_id');
             $table->timestamps();
         });
     }

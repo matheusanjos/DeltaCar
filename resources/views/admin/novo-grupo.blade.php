@@ -1,6 +1,6 @@
 @extends('admin.layouts.admin')
 
-@section('pageTitle', 'Cadastrar Veículo -')
+@section('pageTitle', 'Grupos de Veículos -')
 
 @section('content')
 
@@ -16,10 +16,10 @@
             <li class="breadcrumb-item">
                 <a href="{{ route('carros') }}">Carros</a>
             </li>
-            <li class="breadcrumb-item active">Cadastro</li>
+            <li class="breadcrumb-item active">Grupos</li>
           </ol>
 
-          <form action="/admin/novo-carro" method="post" class="row">
+          <form action="/admin/home" method="post" class="row">
             @csrf
             <div class="container-fluid cadastro mt-4">
                 <div class="row">
@@ -27,43 +27,25 @@
                         <div class="row">
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <h5 class="text-center page-title">Cadastrar Veículo</h5>
+                                <h5 class="text-center page-title">Grupo de Veículos</h5>
                                 <hr>
                             </div>
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label for="modelo"><strong>Modelo</strong></label>
-                                    <input placeholder="Modelo" type="text" class="form-control" name="modelo">
+                                    <label for="nome"><strong>Nome do Grupo</strong></label>
+                                    <input placeholder="Nome do Grupo" type="text" class="form-control" name="nome">
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label for="marca"><strong>Marca</strong></label>
-                                    <input placeholder="Marca" type="text" class="form-control" name="marca">
+                                    <label for="descricao"><strong>Descrição</strong></label>
+                                    <input placeholder="Descrição" type="text" class="form-control" name="descricao">
                                 </div>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
-                                <div class="form-group">
-                                    <label for="grupo"><strong>Grupo</strong></label>
-                                    <select id="cat" name = "grupo" class="form-control">
-                                        @foreach($grupos as $g)
-                                            <option value = "{{$g->id}}">{{ $g->nome }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
-                                <div class="form-group">
-                                    <label for="quantidade"><strong>Quantidade</strong></label>
-                                    <input placeholder="Quantidade" type="text" class="form-control" name="quantidade">
-                                </div>
-                            </div>
-
-                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 my-3">
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 my-1">
                                 <button type="submit" class="btn my-3 form-button">
                                     Finalizar
                                 </button>

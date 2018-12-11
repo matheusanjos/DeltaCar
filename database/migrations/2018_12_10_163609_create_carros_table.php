@@ -18,6 +18,8 @@ class CreateCarrosTable extends Migration
             $table->string('modelo');
             $table->string('marca');
             $table->integer('quantidade');
+            $table->integer('grupo_id')->unsigned();
+            $table->foreign('grupo_id')->references('id')->on('grupos');
             $table->timestamps();
         });
     }
