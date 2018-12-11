@@ -13,9 +13,13 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
+
+Route::get('/carros', 'GrupoController@index');
+
+Route::post('/', 'AluguelController@alugarCarro');
 
 Auth::routes();
 
@@ -25,7 +29,7 @@ Route::get('/admin/home', 'AdminController@index')->name('admin.home');
 Route::get('/admin/carros', 'CarroController@index')->name('carros');
 
 Route::get('/admin/novo-carro', 'CarroController@create')->name('novo.carro');
-Route::post('/admin/home', 'CarroController@store')->name('novo.carro');
+Route::post('/admin/carros', 'CarroController@store')->name('novo.carro');
 
 Route::get('/admin/novo-grupo', 'GrupoController@create')->name('novo.grupo');
 Route::post('/admin/home', 'GrupoController@store')->name('novo.grupo');

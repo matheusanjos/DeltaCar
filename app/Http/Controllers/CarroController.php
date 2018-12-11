@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Carro\App;
+use App\Carro;
 use App\Grupo;
 
 class CarroController extends Controller
@@ -21,13 +21,15 @@ class CarroController extends Controller
 
     public function store(Request $request)
     {
-        $produto = new Produto();
-        $produto->modelo = $request->input('modelo');
-        $produto->marca = $request->input('marca');
-        $produto->quantidade = $request->input('quantidade');
-        $produto->grupo_id = $request->input('grupo');
-        $produto->save();
+        $carro = new Carro();
+        $carro->modelo = $request->input('modelo');
+        $carro->marca = $request->input('marca');
+        $carro->quantidade = $request->input('quantidade');
+        $path = $request->file('imagem')->store('images', 'public');
+        $carro->imagem = $path;
+        $carro->grupo_id = $request->input('grupo');
+        $carro->save();
 
-        return redirect('/admin/home');
+        return redirect('/admin/carros');
     }
 }

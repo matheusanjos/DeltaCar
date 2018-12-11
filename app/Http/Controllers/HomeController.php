@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Carro;
+use App\Grupo;
 
 class HomeController extends Controller
 {
@@ -16,18 +18,9 @@ class HomeController extends Controller
     //     $this->middleware('auth');
     // }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        if(auth()->user()->isAdmin == 0){
-            return redirect('/home');
-        }
-        else{
-            return redirect('admin.home');
-        }
+        $carros = Carro::all();
+        return view('/home', compact('carros'));
     }
 }

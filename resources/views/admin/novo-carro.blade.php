@@ -19,7 +19,7 @@
             <li class="breadcrumb-item active">Cadastro</li>
           </ol>
 
-          <form action="/admin/novo-carro" method="post" class="row">
+          <form action="/admin/carros" method="post" class="row" enctype="multipart/form-data">
             @csrf
             <div class="container-fluid cadastro mt-4">
                 <div class="row">
@@ -42,6 +42,13 @@
                                 <div class="form-group">
                                     <label for="marca"><strong>Marca</strong></label>
                                     <input placeholder="Marca" type="text" class="form-control" name="marca">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="imagem"><strong>Imagem</strong></label>
+                                    <input type="file" class="form-control-file" name="imagem">
                                 </div>
                             </div>
 

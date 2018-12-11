@@ -425,3 +425,8 @@ body#login{ background: url(../images/carousel-bg.jpg) no-repeat center center s
       width: calc(100% - 90px);
     }
   }
+
+  .cart {
+    overflow:hidden;
+    padding:10px 3px;
+}

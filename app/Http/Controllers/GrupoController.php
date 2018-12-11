@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Grupo;
+use App\Carro;
 
 class GrupoController extends Controller
 {
+    public function index()
+    {
+        $carros = Carro::all();
+        return view('cliente.carros', compact('carros'));
+    }
+
     public function create()
     {
         return view('admin.novo-grupo');
@@ -20,6 +27,6 @@ class GrupoController extends Controller
 
         $grupo->save();
 
-        return redirect('home');
+        return redirect('/admin/home');
     }
 }

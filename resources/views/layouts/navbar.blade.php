@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg">
     <div class="container">
-        <a href="{{ url('home') }}" class="navbar-brand js-scroll-trigger">
+        <a href="{{ url('/') }}" class="navbar-brand js-scroll-trigger">
             <img src="{{ asset('images/delta-car.png') }}" alt="{{ config('app.name') }}" width="150">
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#itemsCollapse">
@@ -9,7 +9,7 @@
 
         <div id="itemsCollapse" class="collapse navbar-collapse text-center">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="{{ url('home') }}" class="nav-link js-scroll-trigger">Home</a></li>
+                <li class="nav-item"><a href="{{ url('/') }}" class="nav-link js-scroll-trigger">Home</a></li>
                 <li class="nav-item"><a href="#aluguel" class="nav-link js-scroll-trigger">Aluguel</a></li>
                 <li class="nav-item"><a href="#carros" class="nav-link js-scroll-trigger">Carros</a></li>
                 @guest

@@ -16,7 +16,6 @@
             <li class="breadcrumb-item active">Carros</li>
           </ol>
 
-          {{-- <div class=""> --}}
           <!-- Icon Cards-->
           <div class="row">
             <div class="col-xl-3 col-sm-6 mb-3">
@@ -27,7 +26,7 @@
                   </div>
                   <div class="mr-5">Novo Carro</div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="{{ route('novo.carro') }}">
+                <a class="card-footer text-white clearfix small z-1" href="{{ url('/admin/novo-carro') }}">
                   <span class="float-left">Clique aqui para adicionar</span>
                   <span class="float-right">
                     <i class="fas fa-plus"></i>
@@ -44,7 +43,7 @@
                   </div>
                   <div class="mr-5">Grupo de Carros</div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="{{ route('novo.grupo') }}">
+                <a class="card-footer text-white clearfix small z-1" href="{{ url('/admin/novo-grupo') }}">
                   <span class="float-left">Clique aqui para adicionar</span>
                   <span class="float-right">
                     <i class="fas fa-plus"></i>

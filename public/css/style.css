@@ -180,7 +180,7 @@ section#aluguel {
     padding: 12px 36px;
 }
 
-section#aluguel input[type="text"] {
+section#aluguel input[type="text"], section#aluguel input[type="date"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     -webkit-tap-highlight-color: rgba(255,255,255,0);
@@ -299,4 +299,9 @@ footer.page-footer .footer-copyright {
 
 footer.page-footer a, ol.breadcrumb li.breadcrumb-item a {
     color: #eee;
+}
+
+.cart {
+    overflow:hidden;
+    padding:10px 3px;
 }
